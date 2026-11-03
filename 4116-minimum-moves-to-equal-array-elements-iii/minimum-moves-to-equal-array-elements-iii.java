@@ -1,0 +1,11 @@
+class Solution {
+    public int minMoves(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+        for(int i : nums){
+            if(i>max) max = i;
+            sum += i;
+        }
+        return Math.abs(sum - (max*nums.length));
+    }
+}
